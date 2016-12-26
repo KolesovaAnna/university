@@ -1,0 +1,445 @@
+@font-face {
+    font-family: "FontAwesome";
+    src: url("/resources/fonts/fontawesome.otf") format("otf");
+}
+body {
+    background: #f5f5f5;
+    font-family: Roboto, sans-serif;
+}
+.fa-bars.visible-xs{
+    display: none;
+}
+.wrapper{
+    width: 85%;
+    min-height: 600px;
+    margin: auto;
+    margin-top: 23px;
+    background: #fefefe;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+header{
+    background: #3F51B5;
+    color: white;
+    box-sizing: border-box;
+    padding: 75px 90px 15px 70px;
+}
+h3{
+    font-size: 29px;
+    font-weight: 200;
+}
+.addNewTest td{
+    border-top: 1px dashed #ccc;
+}
+.addNewTest input{
+    border: none;
+    font-size: 16px;
+}
+.addNewTest input:focus{
+    outline: none;
+    color:#464547;
+}
+.addSubmit{
+    text-align: right;
+    font-family: FontAwesome, sans-serif;
+}
+.addSubmit input{
+    height: 28px;
+    width: 55px;
+    margin-right: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    font-size: 14px;
+    color: #666;
+}
+.addSubmit input:hover{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 4px rgba(0,0,0,0.23);
+}
+.tg{
+    width:100%;
+    padding: 55px 70px;
+}
+th{
+    color:#999;
+    font-weight:200;
+    text-align: left;
+    padding-bottom:15px;
+    border-bottom: 1px solid #f5f5f5;
+}
+td{
+    color:#464547;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.testEdit, .testRun, .testDelete{
+    width: 60px;
+}
+tr:not(:first-child){
+    height: 50px;
+}
+.gray-icon{
+    color:#666;
+    font-size:16px;
+}
+.run{
+    display: block;
+    width: 65%;
+    padding: 8px 8px;
+    margin:auto;
+    /*background: #3F51B5;*/
+    background: #E91E63;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.run:hover{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 4px rgba(0,0,0,0.23);
+}
+.run:hover .fa-play{
+    font-size:15px !important;
+}
+.fa-play{
+    color:white;
+    font-size:14px !important;
+}
+.circleAdd{
+    display: none;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    /* padding-top: 20px; */
+    box-sizing: border-box;
+    padding-top: 23px;
+    border-radius: 50%;
+    position: absolute;
+    top: 172px;
+    right: 183px;
+    background: #FFC107;
+    box-shadow: 1px 3px 10px rgba(0,0,0,0.23);
+
+}
+.testTr:hover td{
+    background: #E8EAF6;
+}
+
+/*RUN*/
+
+.title a{
+    font-size: 29px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+.title h3{
+    display: inline-block;
+}
+
+.formDiv{
+    padding: 0 70px 30px;
+    color:#464547;
+}
+.questionTitle{
+    font-size: 20px;
+}
+.answerLabel{
+    display: inline-block;
+    width: 35%;
+    padding-bottom: 20px;
+}
+.answerLabel>input{
+    margin-right: 14px;
+}
+.questionDiv:first-child{
+    padding-top:30px;
+}
+.questionDiv{
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+.pinkSubmit{
+    height: 35px;
+    width: 100px;
+    background: #E91E63;
+    border: none;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.pinkSubmit:hover{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 4px rgba(0,0,0,0.23);
+}
+.pinkSubmit:focus{
+    outline: none;
+}
+
+/*RESULT*/
+.result{
+    text-align: center;
+    font-size: 50px;
+    color: #ccc;
+}
+.result>p:last-child{
+    font-size: 72px;
+    line-height: 48px;
+    color: #E91E63;
+}
+
+/*EDIT TEST*/
+.titleInput>input{
+    border: none;
+    font-size: 29px;
+    color: #464547;
+}
+.titleInput>input:focus{
+    outline: none;
+}
+form#test{
+    padding: 0 70px;
+    margin-bottom: 0;
+}
+.descrInput>input{
+    border: none;
+    font-size: 16px;
+    color: #464547;
+    display: inline-block;
+}
+.descrInput{
+    display:inline-block;
+}
+.descrInput>input:focus{
+    outline: none;
+}
+.divEditSubmit{
+    position: absolute;
+    right: 200px;
+    top: 140px;
+}
+.divEditSubmit>i{
+    position:absolute;
+    top: -3px;
+    font-size: 36px;
+}
+.editSubmit{
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    position: absolute;
+    z-index:999;
+}
+.questForm{
+    padding: 0 70px;
+    color: #464547;
+    position: relative;
+}
+.questForm .questionTitle{
+    display: inline-block;
+}
+.questForm>input{
+    background: transparent;
+}
+.questionTitle>input{
+    border: none;
+    font-size: 20px;
+    color: #464547;
+}
+.questionTitle>input:focus{
+    outline: none;
+}
+.questionDiv{
+    position: relative;
+}
+.editQsubmit{
+    display:inline-block;
+}
+.editQsubmit>input{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border: none;
+    background: transparent;
+}
+.editQsubmit:hover .fa-check-circle.xsIcons{
+    color:#E91E63;
+}
+.xsIcons{
+    font-size: 16px;
+    color:#999;
+}
+.xsIcons:hover{
+    color:#E91E63;
+}
+.removeQuestion{
+    display: inline-block;
+    margin-left: 8px;
+}
+.ans_choice{
+    border:none;
+    font-size: 16px;
+    color: #666;
+    background: transparent;
+}
+.ans_choice:focus{
+    outline: none;
+    color: #464547;
+}
+.addAnswer{
+    border-top: 1px #ccc dashed;
+}
+.choiceInput{
+    border: none;
+    font-size: 16px;
+}
+.choiceInput:focus{
+    outline:none;
+    color: #464547;
+}
+.addSubmit.answer{
+    display: inline-block;
+}
+.addSubmit.answer>input{
+    border:none;
+    position:relative;
+    right:10px;
+}
+.addQuestion{
+    padding:0 70px 20px 70px;
+}
+.addPQuestion>input{
+    border: none;
+    font-size: 16px;
+}
+.addPQuestion>input:focus{
+    outline: none;
+    color: #464547;
+}
+.addQuestion p{
+    display: inline-block;
+    width: 34%;
+}
+.addSubmit.question{
+    display: inline-block;
+}
+.addSubmit.question>input{
+    border:none;
+}
+
+
+@media (max-width: 992px) {
+    .hidden-md{
+        display: none;
+    }
+    body{
+        margin:0;
+        padding:0;
+    }
+    .wrapper{
+        width:auto;
+        margin-top:0;
+        min-height: 100%;
+    }
+    header{
+        padding: 75px 40px 15px;
+    }
+    .tg{
+        padding: 55px 40px;
+    }
+}
+
+@media (max-width: 668px) {
+    .hidden-xs{
+        display: none;
+    }
+    .fa-bars.visible-xs{
+        display: inline-block;
+    }
+    header{
+        padding: 8px 20px 6px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        z-index: 20;
+        width: 100%;
+        position: fixed;
+    }
+    header>h3{
+        font-size: 16px;
+        line-height: 0;
+        display: inline-block;
+        padding-left: 10px;
+    }
+    .tg{
+        padding: 45px 20px;
+    }
+    tr:not(:first-child){
+        height: 70px;
+    }
+    tr:not(:first-child)>td{
+        border-top: 1px solid #f2f2f2;
+    }
+    .testEdit, .testRun, .testDelete{
+        width: 60px;
+    }
+
+    /*RUN*/
+    .title>a{
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .title>h3{
+        font-size: 16px;
+        line-height: 0;
+    }
+    .formDiv{
+        padding: 20px 20px 30px;
+    }
+    .questionDiv{
+        padding: 5px 0;
+    }
+    .answerLabel{
+        width: 49%;
+        padding-bottom: 25px;
+        font-size: 18px;
+    }
+    .questionTitle{
+        font-size: 18px;
+        color: #666;
+    }
+
+    /*RESULT*/
+    .result{
+        padding-top: 56px;
+        font-size: 22px;
+        line-height: 0;
+    }
+    .result>p:last-child{
+        line-height: 0;
+        font-size: 59px;
+    }
+    /*EDIT TEST*/
+    form#test{
+        padding: 50px 20px 0;
+    }
+    .titleInput{
+        margin-bottom: 0;
+    }
+    .titleInput>input{
+        font-size: 18px;
+    }
+    .questForm{
+        padding: 0 20px;
+    }
+    .questionDiv:first-child{
+        padding-top: 0;
+    }
+    .answerLabel.editAnswer{
+        width:81%;
+    }
+    .addQuestion{
+        padding: 0 20px 20px;
+    }
+    .addQuestion p{
+        width: 78%;
+    }
+}
+
+
